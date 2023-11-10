@@ -7,4 +7,6 @@ epl = pd.read_csv('/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/CSVs/p
 columns_to_drop = ['Home_xG', 'Away_xG']
 epl = epl.drop(columns = columns_to_drop)
 
-print(epl.head())
+column_names = epl.columns.tolist()
+
+print(column_names)
