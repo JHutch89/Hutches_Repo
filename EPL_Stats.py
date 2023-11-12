@@ -6,7 +6,4 @@ df_options.options()
 epl = pd.read_csv('/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/CSVs/premier_league_all_matches.csv')
 columns_to_drop = ['Home_xG', 'Away_xG']
 epl = epl.drop(columns = columns_to_drop)
-
-column_names = epl.columns.tolist()
-
-print(column_names)
+print(epl.head())
