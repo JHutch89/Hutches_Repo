@@ -2,15 +2,16 @@ import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score  # Import accuracy_score
 
 # Read CSV file with explicit encoding
 epl = pd.read_csv('/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/CSVs/EPL_Data.csv')
 
-# Drop irrelevant features
-features = epl.drop(['Date', 'Winner', 'Referee'], axis=1)
+# Select features for training
+features = epl[['HomeTeam', 'AwayTeam', 'Referee']]
 
 # Convert categorical variables to numerical using one-hot encoding
-features_encoded = pd.get_dummies(features, columns=['HomeTeam', 'AwayTeam'])
+features_encoded = pd.get_dummies(features, columns=['HomeTeam', 'AwayTeam', 'Referee'])
 
 # Extract target variable
 target = epl['Winner']
@@ -28,33 +29,22 @@ st.title("Football Result Prediction App")
 # User input for home and away teams
 home_team_options = features['HomeTeam'].unique()
 away_team_options = features['AwayTeam'].unique()
+referee_options = features['Referee'].unique()
 
 home_team_selected = st.selectbox("Select Home Team:", home_team_options)
 away_team_selected = st.selectbox("Select Away Team:", away_team_options)
+referee_selected = st.selectbox("Select Referee:", referee_options)
 
 # Manually create a DataFrame for user input with the correct structure
 user_input = pd.DataFrame({
     'HomeTeam': [home_team_selected],
     'AwayTeam': [away_team_selected],
-    'Home Goals': [0],
-    'Away Goals': [0],
-    'HomeShots': [0],
-    'AwayShots': [0],
-    'HomeShotsOnTarget': [0],
-    'AwayShotsOnTarget': [0],
-    'HomeFouls': [0],
-    'AwayFouls': [0],
-    'HomeCorners': [0],
-    'AwayCorners': [0],
-    'HomeYellows': [0],
-    'AwayYellows': [0],
-    'HomeReds': [0],
-    'AwayReds': [0],
+    'Referee': [referee_selected],
 })
 
 # Utility function for one-hot encoding
 def one_hot_encode_input(input_df, training_columns):
-    encoded_df = pd.get_dummies(input_df, columns=['HomeTeam', 'AwayTeam'])
+    encoded_df = pd.get_dummies(input_df, columns=['HomeTeam', 'AwayTeam', 'Referee'])
     # Reorder columns to match the order during training
     encoded_df = encoded_df.reindex(columns=training_columns, fill_value=0)
     return encoded_df
@@ -68,3 +58,8 @@ user_prediction = rf_classifier.predict(user_input_encoded)
 # Display the result
 st.subheader("Result Prediction:")
 st.write(f"The predicted winner is: {user_prediction[0]}")
+
+# Calculate and display model accuracy
+y_pred = rf_classifier.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+st.write(f"Model Accuracy: {accuracy:.2%}")
