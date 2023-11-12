@@ -24,7 +24,7 @@ rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_classifier.fit(X_train, y_train)
 
 # Create a Streamlit app
-st.title("Football Result Prediction App")
+st.title("EPL Prediction App")
 
 # User input for home and away teams
 home_team_options = features['HomeTeam'].unique()
