@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score  # Import accuracy_score
 
 # Read CSV file with explicit encoding
-epl = pd.read_csv('/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/CSVs/EPL_Data.csv')
+epl = pd.read_csv('CSVs/EPL_Data.csv')
 
 # Select features for training
 features = epl[['HomeTeam', 'AwayTeam', 'Referee']]
