@@ -27,9 +27,9 @@ rf_classifier.fit(X_train, y_train)
 st.title("EPL Prediction App")
 
 # User input for home and away teams
-home_team_options = features['HomeTeam'].unique()
-away_team_options = features['AwayTeam'].unique()
-referee_options = features['Referee'].unique()
+home_team_options = sorted(features['HomeTeam'].unique())
+away_team_options = sorted(features['AwayTeam'].unique())
+referee_options = sorted(features['Referee'].unique())
 
 home_team_selected = st.selectbox("Select Home Team:", home_team_options)
 away_team_selected = st.selectbox("Select Away Team:", away_team_options)
