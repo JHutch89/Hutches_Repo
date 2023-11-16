@@ -60,8 +60,7 @@ user_input_encoded = one_hot_encode_input(user_input, X_train.columns)
 user_prediction = rf_classifier.predict(user_input_encoded)
 
 # Display the result
-st.subheader("Result Prediction:")
-st.write(f"The predicted winner is: {user_prediction[0]}")
+st.subheader(f"The predicted winner is: {user_prediction[0]}")
 
 # Calculate and display model accuracy
 y_pred = rf_classifier.predict(X_test)
