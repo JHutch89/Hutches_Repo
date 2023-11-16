@@ -26,6 +26,10 @@ rf_classifier.fit(X_train, y_train)
 # Create a Streamlit app
 st.title("EPL Prediction App")
 
+# Add the image to the top of the app
+image_path = "/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/images/EPL_Logo.png"
+st.image(image_path, use_column_width=True)
+
 # User input for home and away teams
 home_team_options = sorted(features['HomeTeam'].unique())
 away_team_options = sorted(features['AwayTeam'].unique())
