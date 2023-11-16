@@ -28,7 +28,7 @@ st.title("EPL Prediction App")
 
 # Add the image to the top of the app
 image_path = "images/EPL_Logo.png"
-st.image(image_path, use_column_width=True)
+st.image(image_path, use_column_width=True, width=200)
 
 # User input for home and away teams
 home_team_options = sorted(features['HomeTeam'].unique())
