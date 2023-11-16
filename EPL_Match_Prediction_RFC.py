@@ -27,7 +27,7 @@ rf_classifier.fit(X_train, y_train)
 st.title("EPL Prediction App")
 
 # Add the image to the top of the app
-image_path = "/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/images/EPL_Logo.png"
+image_path = "images/EPL_Logo.png"
 st.image(image_path, use_column_width=True)
 
 # User input for home and away teams
