@@ -40,7 +40,6 @@ def spin_wheel(df, selected_name):
 
     # Check if the user has selected a name
     if selected_name:
-
         # Get the corresponding name they are buying for
         buys_for_name = df.loc[df['buyer_name'] == selected_name, 'buys_for_name'].values[0]
 
