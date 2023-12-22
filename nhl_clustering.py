@@ -16,7 +16,6 @@ selected_columns = [
     'playerId',
     'I_F_goals', 
     'I_F_primaryAssists', 
-    'I_F_secondaryAssists',
     'I_F_points',
     'I_F_shotsOnGoal', 
     'faceoffsWon',
@@ -54,15 +53,22 @@ optimal_components = 2
 pca = PCA(n_components=optimal_components)
 X_pca = pca.fit_transform(X_scaled)
 
-## elbow method for optimal K
-inertia = []
-for k in range (1,11): ## update thise depending on number of features
-    kmeans = KMeans(n_clusters=k, random_state=42)
-    kmeans.fit(X_pca)
-    inertia.append(kmeans.inertia_)
+#--------------------------Uncomment if you want print loadings---------------------------------------------------
+# # Print the DataFrame
+# # Create a DataFrame with loadings for the selected components
+# loadings_df = pd.DataFrame(pca.components_[:optimal_components].T, columns=[f'PC{i+1}' for i in range(optimal_components)], index=X.columns)
+# print(loadings_df)
 
-## plotting elbow results
-plt.plot(range(1, 11), inertia, marker='o') ## update thise depending on number of features
-plt.xlabel('Number of Clusters (K)')
-plt.ylabel('Inertia')
-plt.show()
+#--------------------------Uncomment if you want elbow method for optimal K---------------------------------------------------
+## elbow method for optimal K
+# inertia = []
+# for k in range (1,11): ## update thise depending on number of features
+#     kmeans = KMeans(n_clusters=k, random_state=42)
+#     kmeans.fit(X_pca)
+#     inertia.append(kmeans.inertia_)
+
+# ## plotting elbow results
+# plt.plot(range(1, 11), inertia, marker='o') ## update thise depending on number of features
+# plt.xlabel('Number of Clusters (K)')
+# plt.ylabel('Inertia')
+# plt.show()
