@@ -75,17 +75,20 @@ X_pca = pca.fit_transform(X_scaled)
 # plt.ylabel('Inertia')
 # plt.show()
 
+# Extract PC1 and PC2 from the PCA-transformed data
+nhl_data['PC1'] = X_pca[:, 0]
+nhl_data['PC2'] = X_pca[:, 1]
 
 #--------------------------Uncomment if you want silhouette method for optimal K---------------------------------------------------
 # # Determine optimal K using silhouette score
-# max_k = 10  # Set the maximum number of clusters to consider
-# best_score = float('-inf')  # Initialize with negative infinity to ensure any valid score is an improvement
-# best_k = 0
+max_k = 10  # Set the maximum number of clusters to consider
+best_score = float('-inf')  # Initialize with negative infinity to ensure any valid score is an improvement
+best_k = 0
 
-# for k in range(2, max_k + 1):
-#     kmeans = KMeans(n_clusters=k, random_state=42)
-#     labels = kmeans.fit_predict(X_scaled)
-#     score = silhouette_score(X_scaled, labels)
+for k in range(2, max_k + 1):
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    labels = kmeans.fit_predict(X_scaled)
+    score = silhouette_score(X_scaled, labels)
     
 #     print(f"For K={k}, silhouette score: {score}")
 
@@ -97,5 +100,16 @@ nhl_data['cluster'] = kmeans.fit_predict(X_pca)
 
 cluster_stats = nhl_data.drop('playerId', axis=1).groupby('cluster').mean()
 cluster_stats = cluster_stats.round(2)
-print(cluster_stats)
+
+
+for cluster_id in nhl_data['cluster'].unique():
+    cluster_data = nhl_data[nhl_data['cluster'] == cluster_id]
+    plt.scatter(cluster_data['PC1'], cluster_data['PC2'], label=f'Cluster {cluster_id}')
+
+plt.xlabel('PC1')
+plt.ylabel('PC2')
+plt.title('Clusters in 2D Space (PC1 vs PC2)')
+
+plt.legend()
+plt.show()
 
