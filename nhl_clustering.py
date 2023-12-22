@@ -61,4 +61,8 @@ for k in range (1,11): ## update thise depending on number of features
     kmeans.fit(X_pca)
     inertia.append(kmeans.inertia_)
 
-
+## plotting elbow results
+plt.plot(range(1, 11), inertia, marker='o') ## update thise depending on number of features
+plt.xlabel('Number of Clusters (K)')
+plt.ylabel('Inertia')
+plt.show()
