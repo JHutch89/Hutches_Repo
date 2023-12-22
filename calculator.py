@@ -1,3 +1,5 @@
+# calculator_app.py
+
 import streamlit as st
 import math
 
@@ -5,12 +7,18 @@ def main():
     st.title("JH89 Calculator")
 
     num1 = st.number_input("Enter first number:")
-    num2 = st.number_input("Enter second number:")
 
     operation = st.radio("Select operation:", (
         "Add", "Subtract", "Multiply", "Divide",
         "Square Root", "Power", "Logarithm", "Trigonometry"
     ))
+
+    # Checking if operation require two inputs
+    requires_second_number = operation not in ["Square Root", "Logarithm"]
+
+    # Display the second number input conditionally
+    if requires_second_number:
+        num2 = st.number_input("Enter second number:")
 
     result = 0
 
@@ -46,6 +54,12 @@ def main():
             result = math.tan(angle)
 
     st.success(f"Result: {result}")
+
+    # Display bullet points
+    st.write("Additional Information:")
+    st.write("- Bullet Point 1")
+    st.write("- Bullet Point 2")
+    st.write("- Bullet Point 3")
 
 if __name__ == "__main__":
     main()
