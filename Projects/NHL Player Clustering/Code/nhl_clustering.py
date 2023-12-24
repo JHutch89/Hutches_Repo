@@ -8,7 +8,7 @@ from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import StandardScaler
 
 ## assigning csv to dataframe
-nhl_data_original = pd.read_csv('/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/CSVs/NHL_2022_2023_skaters.csv')
+nhl_data_original = pd.read_csv('Projects/NHL Player Clustering/CSVs/NHL_2022_2023_skaters.csv')
 ## filtering for 5 on 5 situations only
 nhl_data_original = nhl_data_original[nhl_data_original['situation']=='5on5']
 
@@ -44,7 +44,7 @@ component_stats = pd.DataFrame({
 })
 
 ## pushing PCA stats to a csv
-component_stats.to_csv('/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/CSVs/NHL_pca_stats.csv', index=False)
+component_stats.to_csv('Projects/NHL Player Clustering/CSVs/NHL_pca_stats.csv', index=False)
 
 #--------------------------Uncomment if you want to plot PCA---------------------------------------------------
 ## plotting PCA results
@@ -105,7 +105,7 @@ nhl_data['cluster'] = kmeans.fit_predict(X_pca)
 cluster_stats = nhl_data.drop('playerId', axis=1).groupby('cluster').mean()
 cluster_stats = cluster_stats.round(2)
 
-cluster_stats.to_csv('/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/CSVs/NHL_cluster_results.csv')
+cluster_stats.to_csv('Projects/NHL Player Clustering/CSVs/NHL_cluster_results.csv')
 
 
 # for cluster_id in nhl_data['cluster'].unique():
@@ -130,7 +130,7 @@ nhl_data_labeled.loc[nhl_data_labeled['cluster'] == 1, 'cluster_label'] = 'Defen
 nhl_data_labeled.loc[nhl_data_labeled['cluster'] == 2, 'cluster_label'] = 'Offensive All Star'
 nhl_data_labeled.loc[nhl_data_labeled['cluster'] == 3, 'cluster_label'] = 'Support Player'
 
-nhl_data_labeled.to_csv('/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/CSVs/nhl_data_labeled.csv', index=False)
+nhl_data_labeled.to_csv('Projects/NHL Player Clustering/CSVs/nhl_data_labeled.csv', index=False)
 
 nhl_player_cluster_final = pd.merge(nhl_data_labeled, nhl_data_original[['playerId', 'name', 'team']], on='playerId', how='left')
 
@@ -140,4 +140,4 @@ selected_features = [
     'cluster_label']
 
 nhl_player_cluster_final = nhl_player_cluster_final[selected_features]
-nhl_player_cluster_final.to_csv('/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/CSVs/nhl_cluster_final.csv', index=False)
+nhl_player_cluster_final.to_csv('Projects/NHL Player Clustering/CSVs/nhl_cluster_final.csv', index=False)
