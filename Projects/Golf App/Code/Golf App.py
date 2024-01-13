@@ -8,7 +8,7 @@ sjmga_2023.set_index("Golfer", inplace=True)
 # Streamlit App
 st.title("SJMGA 2023")
 
-image_path = "/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/Projects/Golf App/Images/golf_ball_hole.jpeg"
+image_path = "Projects/Golf App/Images/golf ball hole.jpeg"
 st.image(image_path, use_column_width=True)
 
 # Create a dropdown for selecting a golfer
