@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-sjmga_2023 = pd.read_csv("/Users/jasonhutches/Desktop/Jason Hutches/Hutches_Repo/sjmga_2023.csv")
+sjmga_2023 = pd.read_csv("sjmga_2023.csv")
 sjmga_2023 = sjmga_2023.fillna("")
 sjmga_2023.set_index("Golfer", inplace=True)
 
