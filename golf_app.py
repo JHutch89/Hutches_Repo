@@ -9,7 +9,7 @@ sjmga_2023.set_index("Golfer", inplace=True)
 st.title("SJMGA 2023")
 
 # Adding image to app
-image_path = "images/EPL_Logo.png"
+image_path = "golf_logo.jpg"
 st.image(image_path, use_column_width=False, width=200)
 
 # Get unique golfers from the index
