@@ -10,7 +10,7 @@ st.title("SJMGA 2023")
 
 # Adding image to app
 image_path = "golf_logo.jpg"
-st.image(image_path, use_column_width=False, width=200)
+st.image(image_path, use_column_width=True)
 
 # Get unique golfers from the index
 unique_golfers = sorted(sjmga_2023.index.unique())
