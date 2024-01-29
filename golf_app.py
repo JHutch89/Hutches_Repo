@@ -8,8 +8,9 @@ sjmga_2023.set_index("Golfer", inplace=True)
 # Streamlit App
 st.title("South Jersey Men's Golf Association")
 
-image = Image.open("golf_logo.jpg")
-st.image(image, width=400)
+# Adding image to app
+image_path = "golf_logo.jpg"
+st.image(image_path, use_column_width=False, width=400)
 
 # Get unique golfers from the index
 unique_golfers = sorted(sjmga_2023.index.unique())
