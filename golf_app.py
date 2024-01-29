@@ -8,18 +8,8 @@ sjmga_2023.set_index("Golfer", inplace=True)
 # Streamlit App
 st.title("South Jersey Men's Golf Association")
 
-image_path = "golf_logo.jpg"
-image = Image.open(image_path)
-
-# Resize the image to the desired width and height
-desired_width = 400
-desired_height = 400 
-image = image.resize((desired_width, desired_height))
-
-# Center and display the image using Markdown
-st.markdown("<div style='text-align: center'>", unsafe_allow_html=True)
-st.image(image, width=desired_width)
-st.markdown("</div>", unsafe_allow_html=True)
+image = Image.open("golf_logo.jpg")
+st.image(image, width=400)
 
 # Get unique golfers from the index
 unique_golfers = sorted(sjmga_2023.index.unique())
