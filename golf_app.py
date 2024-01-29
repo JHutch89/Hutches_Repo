@@ -8,8 +8,11 @@ sjmga_2023.set_index("Golfer", inplace=True)
 # Streamlit App
 st.title("SJMGA 2023")
 
+# Get unique golfers from the index
+unique_golfers = sjmga_2023.index.unique()
+
 # Create a dropdown for selecting a golfer
-selected_golfer = st.selectbox("Select Golfer", sjmga_2023.index)
+selected_golfer = st.selectbox("Select Golfer", unique_golfers)
 
 # Filter the DataFrame based on the selected golfer
 filtered_data = sjmga_2023.loc[selected_golfer]
