@@ -6,7 +6,7 @@ sjmga_2023 = sjmga_2023.fillna("")
 sjmga_2023.set_index("Golfer", inplace=True)
 
 # Streamlit App
-st.title("South Jersey Men's Golf Association")
+st.title("SJMGA")
 
 # Adding image to app
 image_path = "golf_logo.jpg"
