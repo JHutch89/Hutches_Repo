@@ -15,7 +15,7 @@ sjmga_2023.loc[sjmga_2023["Outing"] == "Makefield Highlands", "Course Score"] *=
 # Streamlit App setup
 st.title("SJMGA")
 image_path = "golf_logo.jpg"
-st.image(image_path, use_column_width=False, width=250)
+st.image(image_path, use_column_width=True, width=250)
 
 # Sidebar for filters
 with st.sidebar:
