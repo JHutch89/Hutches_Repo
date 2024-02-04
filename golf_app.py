@@ -5,7 +5,7 @@ import streamlit as st
 sjmga_2023 = pd.read_csv("sjmga_2023.csv", dtype={"Long Drive": str, "Closest Pin": str})
 sjmga_2023 = sjmga_2023.fillna("")
 # Convert 'Course Date' to datetime and extract the year as a string
-sjmga_2023['Course Date'] = pd.to_datetime(sjmga_2023['Course Date']).dt.date
+sjmga_2023['Course Date'] = pd.to_datetime(sjmga_2023['Course Date'])
 sjmga_2023['Year'] = sjmga_2023['Course Date'].dt.year.astype(str)
 sjmga_2023.set_index("Golfer", inplace=True)
 
