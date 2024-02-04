@@ -13,7 +13,6 @@ sjmga_2023.set_index("Golfer", inplace=True)
 sjmga_2023.loc[sjmga_2023["Outing"] == "Makefield Highlands", "Course Score"] *= 2
 
 # Streamlit App setup
-st.title("SJMGA")
 image_path = "golf_logo.jpg"
 st.image(image_path, use_column_width=True, width=250)
 
