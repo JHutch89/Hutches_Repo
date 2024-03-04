@@ -39,7 +39,7 @@ dues_2024 = dues_2024.sort_values(by='Golfer')
 dues_2024.set_index("Golfer", inplace=True)
 
 # Streamlit App setup
-st.title("SJMGA 2024 Schedule/Dues")
+st.title("SJMGA 2024 Schedule | League Dues")
 image_path = "golf/pages/golf_cal.jpg"
 st.image(image_path, width=300)
 

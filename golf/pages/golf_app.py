@@ -1,6 +1,8 @@
 import pandas as pd
 import streamlit as st
 
+pd.set_option('display.max_columns', None) 
+pd.set_option('display.max_rows', None) 
 
 # Load and prepare the data
 sjmga_2023 = pd.read_csv("golf/pages/sjmga_2023.csv", dtype={"Long Drive": str, "Closest Pin": str})
@@ -15,8 +17,8 @@ sjmga_2023.loc[sjmga_2023["Outing"] == "Makefield Highlands", "Course Score"] *=
 
 # Streamlit App setup
 st.title("SJMGA Scores | Handicaps | Winnings")
-image_path = "golf/pages/golf_earnings.jpg"
-st.image(image_path, width =250
+image_path = "golf/pages/golf_earnings.jpeg"
+st.image(image_path, width =250)
 
 # Sidebar for filters
 with st.sidebar:
