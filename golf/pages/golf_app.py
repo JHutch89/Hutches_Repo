@@ -13,9 +13,9 @@ def run():
     # Double the "Course Score" for "Makefield Highlands"
     sjmga_2023.loc[sjmga_2023["Outing"] == "Makefield Highlands", "Course Score"] *= 2
 
-    # Streamlit App setup
-    image_path = "Golf App/golf_logo.jpg"
-    st.image(image_path, use_column_width=True, width=250)
+    # # Streamlit App setup
+    # image_path = "Golf App/golf_logo.jpg"
+    # st.image(image_path, use_column_width=True, width=250)
 
     # Sidebar for filters
     with st.sidebar:
