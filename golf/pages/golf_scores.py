@@ -1,8 +1,8 @@
 import pandas as pd
 import streamlit as st
 
-pd.set_option('display.max_columns', None) 
-pd.set_option('display.max_rows', None) 
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
 
 # Load and prepare the data
 sjmga_2023 = pd.read_csv("golf/pages/sjmga_2023.csv", dtype={"Long Drive": str, "Closest Pin": str})
@@ -15,9 +15,6 @@ sjmga_2023.loc[sjmga_2023["Outing"] == "Makefield Highlands", "Course Score"] *=
 st.title("SJMGA Scores | Handicaps | Winnings")
 image_path = "golf/pages/golf_earnings.jpeg"
 st.image(image_path, width=250)
-
-# Display the original DataFrame
-st.dataframe(sjmga_2023,5000,None)
 
 st.write("## Filters")
 
@@ -37,26 +34,24 @@ selected_course = st.selectbox("Select Course", unique_courses, index=0)
 min_score, max_score = int(sjmga_2023['Course Score'].min()), int(sjmga_2023['Course Score'].max())
 selected_score_range = st.slider("Select Score Range", min_score, max_score, (min_score, max_score))
 
-# Filtering logic
-filtered_data = sjmga_2023.copy()
+# Apply filters directly to sjmga_2023
 if year_option != "All":
-    filtered_data = filtered_data[filtered_data['Year'] == year_option]
+    sjmga_2023 = sjmga_2023[sjmga_2023['Year'] == year_option]
 if selected_golfer != "All":
-    filtered_data = filtered_data.loc[[selected_golfer]]
+    sjmga_2023 = sjmga_2023.loc[[selected_golfer]]
 if selected_course != "All Courses":
-    filtered_data = filtered_data[filtered_data['Outing'] == selected_course]
-filtered_data = filtered_data[
-    (filtered_data['Course Score'] >= selected_score_range[0]) &
-    (filtered_data['Course Score'] <= selected_score_range[1])
+    sjmga_2023 = sjmga_2023[sjmga_2023['Outing'] == selected_course]
+sjmga_2023 = sjmga_2023[
+    (sjmga_2023['Course Score'] >= selected_score_range[0]) &
+    (sjmga_2023['Course Score'] <= selected_score_range[1])
 ]
 
 # Calculate and display the average score for the visible dataset
-if not filtered_data.empty:
-    average_score_visible = round(filtered_data['Course Score'].mean(), 0)
+if not sjmga_2023.empty:
+    average_score_visible = round(sjmga_2023['Course Score'].mean(), 0)
     st.write(f"Average Score for Visible Data: {average_score_visible}")
 else:
     st.write("No data matches your filters.")
 
-# Display the filtered DataFrame
-st.dataframe(filtered_data,5000,None)
-
+# Display the original DataFrame after filtering
+st.dataframe(sjmga_2023, 5000, None)
