@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title("SJMGA Home")
-image_path = "golf_logo.jpg"
+image_path = "Golf App/golf_logo.jpg"
 st.image(image_path, width=400)
 
 st.write("")
