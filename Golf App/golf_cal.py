@@ -40,7 +40,7 @@ dues_2024.set_index("Golfer", inplace=True)
 
 # Streamlit App setup
 st.title("SJMGA 2024 Schedule/Dues")
-image_path = "golf_cal.jpg"
+image_path = "Golf App/golf_cal.jpg"
 st.image(image_path, width=300)
 
 st.write("SJMGA 2024 Schedule")
