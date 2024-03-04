@@ -14,8 +14,9 @@ sjmga_2023.set_index("Golfer", inplace=True)
 sjmga_2023.loc[sjmga_2023["Outing"] == "Makefield Highlands", "Course Score"] *= 2
 
 # Streamlit App setup
+st.title("SJMGA Scores | Handicaps | Winnings")
 image_path = "golf/pages/golf_earnings.jpg"
-st.image(image_path, use_column_width=True, width=250)
+st.image(image_path, width =250
 
 # Sidebar for filters
 with st.sidebar:
