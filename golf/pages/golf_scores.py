@@ -69,4 +69,4 @@ else:
     st.write("No data matches your filters.")
 
 # Display the filtered DataFrame
-st.dataframe(filtered_data.reset_index())
+st.dataframe(filtered_data,5000,None)
