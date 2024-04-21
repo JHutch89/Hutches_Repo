@@ -19,24 +19,24 @@ sjmga_2024['Date'] = sjmga_2024['Date'].dt.date
 sjmga_2024.set_index("Date", inplace=True)
 
 
-dues = [
-    ["Jason", "$145"],
-    ["Dave", "$145"],
-    ["Alex", "$145"],
-    ["Ken", "$145"],
-    ["Chick", "$85"],
-    ["Tom", "$145"],
-    ["Rich", "$65"],
-    ["Shawn", "$115"],
-    ["Mark", "$145"],
-    ["Kyle", "$145"],
-    ["Keith", "$145"],
-    ["Don", "$145"]
+member_snpsht = [
+    ["Jason Hutches", "$35", "27.6"],
+    ["Dave Cunningham", "$20","24"],
+    ["Alex Taraschi", "$10","21.8"],
+    ["Ken Cooper", "$15","30.4"],
+    ["Chick Campbell", "$15","34.3"],
+    ["Tom Taraschi", "$10","28"],
+    ["Rich Hamner", "$0","26.1"],
+    ["Shawn Frick", "$0","28.9"],
+    ["Mark McDermott", "$0","28.7"],
+    ["Kyle McClintock", "$0","19.1"],
+    ["Keith Halbach", "$0","33.7"],
+    ["Don Latka", "$0","28.9"]
 ]
 
-dues_2024 = pd.DataFrame(dues, columns=["Golfer", "Outstanding Dues"])
-dues_2024 = dues_2024.sort_values(by='Golfer')
-dues_2024.set_index("Golfer", inplace=True)
+snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Winnings", "Current HC"])
+snpst = snpst.sort_values(by='Golfer')
+snpst.set_index("Golfer", inplace=True)
 
 # Streamlit App setup
 st.title("SJMGA 2024 Schedule | League Dues")
