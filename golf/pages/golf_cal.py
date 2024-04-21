@@ -34,7 +34,7 @@ member_snpsht = [
     ["Don Latka", "$0","28.9"]
 ]
 
-snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Winnings", "Current HC"])
+snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Winnings", "Handicap"])
 snpst = snpst.sort_values(by='Golfer')
 snpst.set_index("Golfer", inplace=True)
 
@@ -45,7 +45,7 @@ image_path = "golf/pages/golf_cal.jpg"
 st.image(image_path, width=300)
 
 st.write("SJMGA 2024 Schedule")
-st.dataframe(sjmga_2024,None, None)
+st.dataframe(sjmga_2024,500, None)
 st.write("")
 st.write("")
 st.write("SJMGA 2024 Snapshot")
