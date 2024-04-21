@@ -45,7 +45,7 @@ image_path = "golf/pages/golf_cal.jpg"
 st.image(image_path, width=300)
 
 st.write("SJMGA 2024 Schedule")
-st.dataframe(sjmga_2024,500, None)
+st.dataframe(sjmga_2024,750, 450)
 st.write("")
 st.write("")
 st.write("SJMGA 2024 Snapshot")
