@@ -30,7 +30,7 @@ member_snpsht = [
     ["Shawn Frick", "$0","28.9"],
     ["Mark McDermott", "$0","28.7"],
     ["Kyle McClintock", "$0","19.1"],
-    ["Keith Halbach", "$0","33.7"],
+    ["Keith Kalbach", "$0","33.7"],
     ["Don Latka", "$0","28.9"]
 ]
 
