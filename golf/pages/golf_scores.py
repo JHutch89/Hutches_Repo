@@ -54,4 +54,4 @@ else:
     st.write("No data matches your filters.")
 
 # Display the original DataFrame after filtering
-st.dataframe(sjmga_2023, 5000, 5000)
+st.dataframe(sjmga_2023, 5000, 2000)
