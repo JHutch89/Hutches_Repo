@@ -38,6 +38,7 @@ snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Winnings", "Current HC"]
 snpst = snpst.sort_values(by='Golfer')
 snpst.set_index("Golfer", inplace=True)
 
+
 # Streamlit App setup
 st.title("SJMGA 2024 Schedule | League Dues")
 image_path = "golf/pages/golf_cal.jpg"
@@ -48,7 +49,7 @@ st.dataframe(sjmga_2024,500, None)
 st.write("")
 st.write("")
 st.write("SJMGA 2024 Snapshot")
-st.dataframe(snpst,250, 450)
+st.dataframe(snpst,250, 550)
 st.write("")
 st.write("")
 st.title("Congrats to Kyle on his first EAGLE!!")
