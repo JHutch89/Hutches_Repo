@@ -4,7 +4,7 @@ from datetime import datetime
 
 calendar = [
     ["4/20/24", "Pinelands", "9:33am", "$89"],
-    ["5/18/24", "Makefield Highlands", "TBD", "TBD"],
+    ["5/18/24", "Gambler Ridge | Middletwon CC | Mattawang", "TBD", "TBD"],
     ["6/29/24", "Harbor Pines", "TBD", "TBD"],
     ["7/20/24", "Town and Country", "TBD", "TBD"],
     ["8/10/24", "Cream Ridge", "TBD", "TBD"],
