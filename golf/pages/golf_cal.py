@@ -20,18 +20,18 @@ sjmga_2024.set_index("Date", inplace=True)
 
 
 member_snpsht = [
-    ["Jason Hutches", "$35", "27.6"],
-    ["Dave Cunningham", "$20","24"],
-    ["Alex Taraschi", "$10","21.8"],
-    ["Ken Cooper", "$15","30.4"],
-    ["Chick Campbell", "$15","34.3"],
+    ["Jason Hutches", "$60", "27.6"],
+    ["Dave Cunningham", "$35","23.6"],
+    ["Alex Taraschi", "$25","21.6"],
+    ["Ken Cooper", "$15","30.7"],
+    ["Chick Campbell", "$15","34.8"],
     ["Tom Taraschi", "$10","28"],
-    ["Rich Hamner", "$0","26.1"],
-    ["Shawn Frick", "$0","28.9"],
+    ["Rich Hamner", "$15","25.8"],
+    ["Shawn Frick", "$20","28.2"],
     ["Mark McDermott", "$0","28.7"],
-    ["Kyle McClintock", "$0","19.1"],
-    ["Keith Kalbach", "$0","33.7"],
-    ["Don Latka", "$0","28.9"]
+    ["Kyle McClintock", "$0","21"],
+    ["Keith Kalbach", "$10","33.7"],
+    ["Don Latka", "$0","29"]
 ]
 
 snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Winnings", "HC"])
