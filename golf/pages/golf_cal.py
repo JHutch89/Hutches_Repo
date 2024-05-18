@@ -52,8 +52,7 @@ st.write("SJMGA 2024 Snapshot")
 st.dataframe(snpst,1000, 450)
 st.write("")
 st.write("")
-st.title("Congrats to Kyle on his first EAGLE!!")
-st.write("4/20/2024---mark it down")
-image_path2 = "golf/pages/eagle.jpg"
+st.title("Jason and Dave have unlocked the Pin Seeker Achievement")
+image_path2 = "golf/pages/pinseeker.jpg"
 st.image(image_path2, width=300)
 
