@@ -1,0 +1,72 @@
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+import os
+
+# Load the dataset
+file_path = 'eCommerce/ecommerce_data.csv'
+ecommerce_data = pd.read_csv(file_path, encoding='ISO-8859-1')
+
+# Preprocess the data
+data = ecommerce_data.dropna(subset=['CustomerID'])
+data = data[['CustomerID', 'Quantity', 'UnitPrice']]
+
+# Aggregate data by CustomerID
+data_agg = data.groupby('CustomerID').agg({
+    'Quantity': 'sum',
+    'UnitPrice': 'mean'
+}).reset_index()
+
+# Standardize the features
+scaler = StandardScaler()
+data_scaled = scaler.fit_transform(data_agg[['Quantity', 'UnitPrice']])
+
+# Apply K-means clustering with 3 clusters
+kmeans = KMeans(n_clusters=3, random_state=42)
+data_agg['Cluster'] = kmeans.fit_predict(data_scaled)
+
+# Define cluster labels
+cluster_labels = {
+    0: 'Regular Customers',
+    1: 'Outliers',
+    2: 'Wholesale Customers'
+}
+
+# Map cluster numbers to labels
+data_agg['Cluster_Label'] = data_agg['Cluster'].map(cluster_labels)
+
+# Assign colors to clusters for visualization
+colors = ['C0', 'C1', 'C2']
+color_map = {label: color for label, color in zip(cluster_labels.values(), colors)}
+data_agg['Color'] = data_agg['Cluster_Label'].map(color_map)
+
+# Visualize the clusters with labels
+plt.figure(figsize=(10, 6))
+for label, color in color_map.items():
+    subset = data_agg[data_agg['Cluster_Label'] == label]
+    plt.scatter(subset['Quantity'], subset['UnitPrice'], c=color, label=label)
+
+plt.xlabel('Quantity')
+plt.ylabel('Unit Price')
+plt.title('Customer Segmentation')
+plt.legend()
+plt.show()
+
+# Calculate cluster statistics
+cluster_stats = data_agg.groupby('Cluster_Label').agg({
+    'CustomerID': 'count',
+    'Quantity': 'mean',
+    'UnitPrice': 'mean'
+}).rename(columns={'CustomerID': 'Num_Customers', 'Quantity': 'Avg_Quantity', 'UnitPrice': 'Avg_UnitPrice'}).reset_index()
+
+# Print cluster statistics
+print(cluster_stats)
+
+# Create output directory if it doesn't exist
+output_dir = 'eCommerce/outputs'
+os.makedirs(output_dir, exist_ok=True)
+
+# Save the clustered data and statistics
+data_agg.to_csv(os.path.join(output_dir, 'customer_segments.csv'), index=False)
+cluster_stats.to_csv(os.path.join(output_dir, 'cluster_stats.csv'), index=False)

@@ -1,0 +1,4 @@
+Cluster_Label,Num_Customers,Avg_Quantity,Avg_UnitPrice
+Outliers,2,29.5,6171.705
+Regular Customers,4360,948.001376146789,5.159077638242162
+Wholesale Customers,10,77354.3,4.5484897503812345
