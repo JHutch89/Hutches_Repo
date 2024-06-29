@@ -20,18 +20,18 @@ sjmga_2024.set_index("Date", inplace=True)
 
 
 member_snpsht = [
-    ["Jason Hutches", "$60", "27.6"],
-    ["Dave Cunningham", "$35","23.6"],
-    ["Alex Taraschi", "$25","21.6"],
-    ["Ken Cooper", "$15","30.7"],
+    ["Jason Hutches", "$80", "26.8"],
+    ["Dave Cunningham", "$55","23.1"],
+    ["Alex Taraschi", "$30","20.8"],
+    ["Ken Cooper", "$25","31.4"],
     ["Chick Campbell", "$15","34.8"],
-    ["Tom Taraschi", "$10","28"],
-    ["Rich Hamner", "$15","25.8"],
-    ["Shawn Frick", "$20","28.2"],
+    ["Tom Taraschi", "$35","27.7"],
+    ["Rich Hamner", "$15","26.4"],
+    ["Shawn Frick", "$20","28.4"],
     ["Mark McDermott", "$0","28.7"],
-    ["Kyle McClintock", "$0","21"],
-    ["Keith Kalbach", "$10","33.7"],
-    ["Don Latka", "$0","29"]
+    ["Kyle McClintock", "$0","21.9"],
+    ["Keith Kalbach", "$20","33.7"],
+    ["Don Latka", "$20","28.2"]
 ]
 
 snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Winnings", "HC"])
@@ -52,7 +52,7 @@ st.write("SJMGA 2024 Snapshot")
 st.dataframe(snpst,1000, 450)
 st.write("")
 st.write("")
-st.title("Jason and Dave have unlocked the Pin Seeker Achievement")
-image_path2 = "golf/pages/pinseeker.jpg"
+st.title("Putting at Twisted Dune")
+image_path2 = "golf/pages/fast_greens.jpg"
 st.image(image_path2, width=300)
 
