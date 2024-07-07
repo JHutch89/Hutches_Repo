@@ -23,7 +23,7 @@ st.write(professional_summary)
 
 # Placeholder buttons for other pages
 st.header("My Work")
-st.button("Project 1 (Placeholder)")
+st.button("SJMGA Golf League")
 st.button("Project 2 (Placeholder)")
 st.button("Project 3 (Placeholder)")
 
