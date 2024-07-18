@@ -5,7 +5,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
 # Load and prepare the data
-sjmga_2023 = pd.read_csv("golf/pages/sjmga_2023.csv", dtype={"Long Drive": str, "Closest Pin": str})
+sjmga_2023 = pd.read_csv("Golf League/pages/sjmga_2023.csv", dtype={"Long Drive": str, "Closest Pin": str})
 sjmga_2023 = sjmga_2023.fillna("")
 sjmga_2023['Course Date'] = pd.to_datetime(sjmga_2023['Course Date'], format='%m/%d/%y').dt.strftime('%Y-%m-%d')
 sjmga_2023['Year'] = sjmga_2023['Course Date'].apply(lambda x: x[:4])
@@ -13,7 +13,7 @@ sjmga_2023.set_index("Golfer", inplace=True)
 sjmga_2023.loc[sjmga_2023["Outing"] == "Makefield Highlands", "Course Score"] *= 2
 
 st.title("SJMGA Scores | Handicaps | Winnings")
-image_path = "golf/pages/golf_earnings.jpeg"
+image_path = "Golf League/pages/golf_earnings.jpeg"
 st.image(image_path, width=250)
 
 st.write("## Filters")

@@ -41,7 +41,7 @@ snpst.set_index("Golfer", inplace=True)
 
 # Streamlit App setup
 st.title("SJMGA 2024 Schedule | League Dues")
-image_path = "golf/pages/golf_cal.jpg"
+image_path = "Golf League/pages/golf_cal.jpg"
 st.image(image_path, width=300)
 
 st.write("SJMGA 2024 Schedule")
@@ -53,6 +53,6 @@ st.dataframe(snpst,1000, 450)
 st.write("")
 st.write("")
 st.title("Putting at Twisted Dune")
-image_path2 = "golf/pages/fast_greens.jpg"
+image_path2 = "Golf League/pages/fast_greens.jpg"
 st.image(image_path2, width=300)
 
