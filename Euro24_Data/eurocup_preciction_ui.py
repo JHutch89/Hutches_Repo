@@ -39,7 +39,7 @@ country_flags = {
 }
 
 st.title('Euro Cup 2024 Score Prediction')
-image_path = "Euro 24 Data/euro ball dalle.jpeg"
+image_path = "Euro24_Data/euro_ball.jpeg"
 st.image(image_path, width=350)
 
 home_team = st.selectbox('Select Home Team', le_home_team.classes_)
