@@ -16,13 +16,12 @@ This model is a neural network regressor built using the Multi-Layer Perceptron 
 3. **Model Training**: The MLPRegressor model is trained on the training data using features to predict the scores.
 4. **Prediction**: The model takes the input of selected teams, stadium, and referee, and predicts the likely scores for the home and away teams.
 
-## What are we accomplishing?
-By using this model, you can:
-- Predict the scores of random Euro Cup matches based on historical data.
-- Explore the impact of different factors (like teams, stadiums, and referees) on the match outcomes.
+## What does this accomplish?
+- Predicts the scores of random Euro Cup matches based on historical data.
+- Explores the impact of different factors (teams, stadiums, and referees) on the match outcomes.
 
 ## How to use the app:
 1. Select the home team and away team from the dropdown menus.
 2. Choose the stadium and referee for the match.
 3. Click the 'Predict Score' button to see the predicted scores!
-"""
+""")
