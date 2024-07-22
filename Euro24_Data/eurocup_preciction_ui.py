@@ -3,12 +3,12 @@ import joblib
 import numpy as np
 
 # Load the encoders, scaler, and model
-le_home_team = joblib.load('Euro 24 Data/le_home_team.pkl')
-le_away_team = joblib.load('Euro 24 Data/le_away_team.pkl')
-le_stadium = joblib.load('Euro 24 Data/le_stadium.pkl')
-le_referee = joblib.load('Euro 24 Data/le_referee.pkl')
-scaler = joblib.load('Euro 24 Data/scaler.pkl')
-model = joblib.load('Euro 24 Data/score_prediction_model.pkl')
+le_home_team = joblib.load('Euro24_Data/le_home_team.pkl')
+le_away_team = joblib.load('Euro24_Data/le_away_team.pkl')
+le_stadium = joblib.load('uro24_Data/le_stadium.pkl')
+le_referee = joblib.load('uro24_Data/le_referee.pkl')
+scaler = joblib.load('uro24_Data/scaler.pkl')
+model = joblib.load('uro24_Data/score_prediction_model.pkl')
 
 # Mapping from country names to flag emojis
 country_flags = {
