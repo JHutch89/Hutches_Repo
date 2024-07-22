@@ -13,7 +13,7 @@ sjmga_2023.set_index("Golfer", inplace=True)
 sjmga_2023.loc[sjmga_2023["Outing"] == "Makefield Highlands", "Course Score"] *= 2
 
 st.title("SJMGA Scores | Handicaps | Winnings")
-image_path = "Golf League/pages/golf_earnings.jpeg"
+image_path = "Golf/pages/golf_earnings.jpeg"
 st.image(image_path, width=250)
 
 st.write("## Filters")
