@@ -4,7 +4,7 @@ import streamlit as st
 st.header("Project Overview")
 st.write("""
 I'm a huge soccer fan, and I wanted to combine my love for soccer with my love for data.  I've done plenty of work in regression, clustering and other prediction models...
-but I haven't done much using neural networks.  So, I wanted to have a go at building a predictive model, using MLPRegressor which is a class of neural networks used in regression.
+but I haven't done much using neural networks.  So, I wanted to have a go at building a predictive model using MLPRegressor, which is a class of neural networks used in regression.
 I am still working through some feature engineering, but I do hope you enjoy playing around with some different scenarios!
          
 ## What is this model?
