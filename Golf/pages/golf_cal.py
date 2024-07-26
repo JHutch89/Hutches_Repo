@@ -20,18 +20,18 @@ sjmga_2024.set_index("Date", inplace=True)
 
 
 member_snpsht = [
-    ["Jason Hutches", "$80", "26.8"],
-    ["Dave Cunningham", "$55","23.1"],
-    ["Alex Taraschi", "$30","20.8"],
-    ["Ken Cooper", "$25","31.4"],
-    ["Chick Campbell", "$15","34.8"],
-    ["Tom Taraschi", "$35","27.7"],
-    ["Rich Hamner", "$15","26.4"],
-    ["Shawn Frick", "$20","28.4"],
-    ["Mark McDermott", "$0","28.7"],
-    ["Kyle McClintock", "$0","21.9"],
-    ["Keith Kalbach", "$20","33.7"],
-    ["Don Latka", "$20","28.2"]
+    ["Jason Hutches", "$80", "24.7"],
+    ["Dave Cunningham", "$60","23"],
+    ["Alex Taraschi", "$50","19.6"],
+    ["Ken Cooper", "$35","30.6"],
+    ["Chick Campbell", "$40","35.1"],
+    ["Tom Taraschi", "$50","27"],
+    ["Rich Hamner", "$15","26.5"],
+    ["Shawn Frick", "$30","28.3"],
+    ["Mark McDermott", "$5","29.2"],
+    ["Kyle McClintock", "$0","27.3"],
+    ["Keith Kalbach", "$40","33.4"],
+    ["Don Latka", "$20","28.6"]
 ]
 
 snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Winnings", "HC"])
@@ -50,9 +50,9 @@ st.write("")
 st.write("")
 st.write("SJMGA 2024 Snapshot")
 st.dataframe(snpst,1000, 450)
-st.write("")
-st.write("")
-st.title("Putting at Twisted Dune")
-image_path2 = "Golf/pages/fast_greens.jpg"
-st.image(image_path2, width=300)
+# st.write("")
+# st.write("")
+# st.title("Putting at Twisted Dune")
+# image_path2 = "Golf/pages/fast_greens.jpg"
+# st.image(image_path2, width=300)
 
