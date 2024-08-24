@@ -75,7 +75,7 @@ def cluster_and_visualize(nfl_data, position):
         fig.update_layout(
             width=800,
             height=550,
-            margin=dict(l=10, r=10, t=20, b=10),
+            margin=dict(l=10, r=10, t=30, b=10),
             title=dict(font=dict(size=20)),
             legend=dict(
                 font=dict(size=12),
@@ -86,7 +86,7 @@ def cluster_and_visualize(nfl_data, position):
                 x=.05
             )   
         )
-        st.plotly_chart(fig)
+        st.plotly_chart(fig, use_container_width=True)
 
     
     # Display the players with their cluster labels
