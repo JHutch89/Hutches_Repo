@@ -73,8 +73,8 @@ def cluster_and_visualize(nfl_data, position):
         )
 
         fig.update_layout(
-            width=500,
-            height=500,
+            width=1000,
+            height=800,
             margin=dict(l=20, r=20, t=50, b=20),
             title=dict(font=dict(size=20)),
             legend=dict(
