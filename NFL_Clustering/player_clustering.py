@@ -76,7 +76,14 @@ def cluster_and_visualize(nfl_data, position):
             height=500,
             margin=dict(l=20, r=20, t=50, b=20),
             legend=dict(font=dict(size=14)),
-            title=dict(font=dict(size=20)) 
+            title=dict(font=dict(size=20)),
+            legend=dict(
+                orientation="h",  # Horizontal legend (if that helps)
+                yanchor="bottom",
+                y=1.02,
+                xanchor="right",
+                x=1
+            )   
         )
         st.plotly_chart(fig)
     
