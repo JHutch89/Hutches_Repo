@@ -71,13 +71,14 @@ def cluster_and_visualize(nfl_data, position):
             hover_data=['name'],
             title=f"Clustering for: {position}",
         )
+
         fig.update_layout(
             width=500,
             height=500,
             margin=dict(l=20, r=20, t=50, b=20),
-            legend=dict(font=dict(size=14)),
             title=dict(font=dict(size=20)),
             legend=dict(
+                font=dict(size=14),
                 orientation="h",  # Horizontal legend (if that helps)
                 yanchor="bottom",
                 y=1.02,
@@ -86,6 +87,7 @@ def cluster_and_visualize(nfl_data, position):
             )   
         )
         st.plotly_chart(fig)
+
     
     # Display the players with their cluster labels
     st.write(f"Players in each cluster for position {position}:")
