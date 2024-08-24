@@ -7,7 +7,7 @@ import streamlit as st
 nfl_data = pd.read_csv('NFL Clustering/CSV Source/nfl_2023_offense.csv') 
 
 st.title("2023 NFL Player Clustering: KMeans")
-st.image('NFL Clustering/Images/football_data.jpeg', width=350)
+# st.image('NFL Clustering/Images/football_data.jpeg', width=350)
 
 # Define a function to create clustering model, visualize it, and save cluster stats
 def cluster_and_visualize(nfl_data, position):
