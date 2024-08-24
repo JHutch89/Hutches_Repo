@@ -79,8 +79,8 @@ def cluster_and_visualize(nfl_data, position):
             title=dict(font=dict(size=20)),
             legend=dict(
                 font=dict(size=14),
-                orientation="h",  # Horizontal legend (if that helps)
-                yanchor="bottom",
+                orientation="h", 
+                yanchor="top",
                 y=1.02,
                 xanchor="right",
                 x=1
