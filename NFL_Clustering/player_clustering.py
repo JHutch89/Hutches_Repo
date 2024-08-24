@@ -72,8 +72,8 @@ def cluster_and_visualize(nfl_data, position):
             title=f"Clustering for: {position}",
         )
         fig.update_layout(
-            width=900,
-            height=700,
+            width=500,
+            height=500,
             margin=dict(l=20, r=20, t=50, b=20),
             legend=dict(font=dict(size=14)),
             title=dict(font=dict(size=20)) 
