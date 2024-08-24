@@ -77,14 +77,15 @@ def cluster_and_visualize(nfl_data, position):
             height=550,
             margin=dict(l=10, r=10, t=30, b=10),
             title=dict(font=dict(size=20)),
-            legend=dict(
-                font=dict(size=12),
-                orientation="h", 
-                yanchor="top",
-                y=.02,
-                xanchor="center",
-                x=.05
-            )   
+            showlegend=False
+            # legend=dict(
+            #     font=dict(size=12),
+            #     orientation="h", 
+            #     yanchor="top",
+            #     y=.02,
+            #     xanchor="center",
+            #     x=.05
+            # )   
         )
         st.plotly_chart(fig, use_container_width=True)
 
