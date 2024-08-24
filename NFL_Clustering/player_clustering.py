@@ -78,12 +78,12 @@ def cluster_and_visualize(nfl_data, position):
             margin=dict(l=20, r=20, t=50, b=20),
             title=dict(font=dict(size=20)),
             legend=dict(
-                font=dict(size=14),
+                font=dict(size=12),
                 orientation="h", 
                 yanchor="top",
-                y=1.02,
-                xanchor="right",
-                x=1
+                y=.02,
+                xanchor="center",
+                x=.05
             )   
         )
         st.plotly_chart(fig)
