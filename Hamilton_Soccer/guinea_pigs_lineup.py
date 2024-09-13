@@ -84,6 +84,8 @@ team2_off_right = saved_assignments.get("team2_ro", players[9])
 # Team Positioning with two columns
 st.title("5v5 Soccer Team Positioning")
 
+st.image('Hamilton_Soccer/guinea_pig_soccer.jpeg', width=350)
+
 col1, col2 = st.columns(2)
 
 # Team 1 (Left side of the field)
