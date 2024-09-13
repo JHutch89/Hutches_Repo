@@ -81,37 +81,34 @@ team2_off_left = saved_assignments.get("team2_lo", players[7])
 team2_off_center = saved_assignments.get("team2_co", players[8])
 team2_off_right = saved_assignments.get("team2_ro", players[9])
 
-# Team Positioning
-st.title("Guinea Pigs Gameday Lineup")
-st.image('Hamilton_Soccer/guinea_pig_soccer.jpeg', width=400)
+# Team Positioning with two columns
+st.title("5v5 Soccer Team Positioning")
 
-st.header("Team 1")
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
+
+# Team 1 (Left side of the field)
 with col1:
+    st.header("Team 1")
     st.subheader("Defense")
-    team1_def_left = st.selectbox("Team 1 Left Defender", players, index=players.index(team1_def_left), key="team1_ld")
-    team1_def_right = st.selectbox("Team 1 Right Defender", players, index=players.index(team1_def_right), key="team1_rd")
-with col2:
+    team1_def_left = st.selectbox("Left Defender", players, index=players.index(team1_def_left), key="team1_ld")
+    team1_def_right = st.selectbox("Right Defender", players, index=players.index(team1_def_right), key="team1_rd")
+    
     st.subheader("Offense")
-    team1_off_left = st.selectbox("Team 1 Left Offense", players, index=players.index(team1_off_left), key="team1_lo")
-    team1_off_center = st.selectbox("Team 1 Center Offense", players, index=players.index(team1_off_center), key="team1_co")
-with col3:
-    st.subheader("Offense")
-    team1_off_right = st.selectbox("Team 1 Right Offense", players, index=players.index(team1_off_right), key="team1_ro")
+    team1_off_left = st.selectbox("Left Offense", players, index=players.index(team1_off_left), key="team1_lo")
+    team1_off_center = st.selectbox("Center Offense", players, index=players.index(team1_off_center), key="team1_co")
+    team1_off_right = st.selectbox("Right Offense", players, index=players.index(team1_off_right), key="team1_ro")
 
-st.header("Team 2")
-col4, col5, col6 = st.columns(3)
-with col4:
+# Team 2 (Right side of the field)
+with col2:
+    st.header("Team 2")
     st.subheader("Defense")
-    team2_def_left = st.selectbox("Team 2 Left Defender", players, index=players.index(team2_def_left), key="team2_ld")
-    team2_def_right = st.selectbox("Team 2 Right Defender", players, index=players.index(team2_def_right), key="team2_rd")
-with col5:
+    team2_def_left = st.selectbox("Left Defender", players, index=players.index(team2_def_left), key="team2_ld")
+    team2_def_right = st.selectbox("Right Defender", players, index=players.index(team2_def_right), key="team2_rd")
+    
     st.subheader("Offense")
-    team2_off_left = st.selectbox("Team 2 Left Offense", players, index=players.index(team2_off_left), key="team2_lo")
-    team2_off_center = st.selectbox("Team 2 Center Offense", players, index=players.index(team2_off_center), key="team2_co")
-with col6:
-    st.subheader("Offense")
-    team2_off_right = st.selectbox("Team 2 Right Offense", players, index=players.index(team2_off_right), key="team2_ro")
+    team2_off_left = st.selectbox("Left Offense", players, index=players.index(team2_off_left), key="team2_lo")
+    team2_off_center = st.selectbox("Center Offense", players, index=players.index(team2_off_center), key="team2_co")
+    team2_off_right = st.selectbox("Right Offense", players, index=players.index(team2_off_right), key="team2_ro")
 
 # Draw the field and display player names
 st.pyplot(draw_soccer_field(team1_def_left, team1_def_right, team1_off_left, team1_off_center, team1_off_right,
