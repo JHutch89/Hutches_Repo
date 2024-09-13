@@ -1,0 +1,18 @@
+Term,Interpretation,Good Value,Recommendations if Unfavorable
+Dep. Variable,The dependent variable being predicted by the model.,The correct dependent variable,Ensure the correct variable is being predicted.
+No. Observations,The total number of observations used in the model.,Depends on the data,Consider increasing the number of observations for more robust modeling.
+Model,The SARIMAX model configuration including seasonal order.,Accurate model specification,Adjust model orders based on data seasonality and lag behavior.
+Log Likelihood,Measures how likely the model is to have generated the observed data. Higher is better.,Higher values closer to 0,Re-evaluate model specification and adjust parameters or transformation to improve fit.
+AIC (Akaike Information Criterion),Evaluates model fit with a penalty for the number of parameters. Lower values are better.,"Lower is better (e.g., AIC < 2000)",Reduce overfitting by simplifying the model.
+BIC (Bayesian Information Criterion),Similar to AIC but with a larger penalty for more parameters. Lower is better.,"Lower is better (e.g., BIC < 2010)",Simplify the model or reduce the number of parameters to avoid overfitting.
+HQIC (Hannan-Quinn Criterion),Another criterion for model selection. Lower values indicate a better model.,"Lower is better (e.g., HQIC < 2005)",Simplify the model or adjust seasonal components.
+Covariance Type,Describes the method used to estimate the covariance matrix.,"Appropriate choice (e.g., 'opg' or 'robust')",Switch to a different covariance estimator or use 'robust' for heteroskedasticity.
+Coefficient (coef),The coefficient of the parameter estimated by the model.,Coefficients in a reasonable range based on the domain,Review parameter significance or transform variables for better interpretability.
+Standard Error (std err),The standard error of the estimated parameter. Smaller is better.,Smaller values (closer to 0),Smaller standard errors indicate more reliable coefficient estimates; consider improving model fit.
+Z-Value (z),"The Z-value, which indicates the number of standard deviations the coefficient is from 0.",Values close to 0 (between -2 and 2),"If Z is too large or too small, it may indicate overestimation or underestimation; recheck parameter specification."
+P-Value (P>|z|),P-Value for the significance of the Z-value. Should be lower than 0.05 for significance.,< 0.05 for statistical significance,"If P is too high, the variable may not be statistically significant; check for inclusion necessity."
+Ljung-Box (Q),Tests if residuals are independent. Higher values indicate no autocorrelation.,> 0.05 indicates no autocorrelation,Increase the model complexity or use differencing to remove autocorrelation.
+Jarque-Bera (JB),Test for normality of residuals. Lower values suggest residuals are normally distributed.,Values closer to 0 indicate normality,Consider transformations or add more data to reduce non-normality.
+Heteroskedasticity (H),Measures the presence of heteroskedasticity in the residuals. Lower values indicate homoskedasticity.,Close to 1 for no heteroskedasticity,Consider using an ARCH/GARCH model to address heteroskedasticity.
+Skew,Measures the asymmetry of the residuals. A value close to 0 is ideal.,Skew closer to 0 (between -0.5 and 0.5),Transform data or improve model specification to fix skew.
+Kurtosis,Measures the peakedness or flatness of the residuals. A value around 3 is considered normal.,Kurtosis close to 3 is normal,"If kurtosis deviates significantly from 3, re-examine model assumptions or try alternative distributions."
