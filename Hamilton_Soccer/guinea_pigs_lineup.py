@@ -82,7 +82,7 @@ team2_off_center = saved_assignments.get("team2_co", players[8])
 team2_off_right = saved_assignments.get("team2_ro", players[9])
 
 # Team Positioning with two columns
-st.title("5v5 Soccer Team Positioning")
+st.title("Guinea Pigs Gameday Lineups")
 
 st.image('Hamilton_Soccer/guinea_pig_soccer.jpeg', width=350)
 
