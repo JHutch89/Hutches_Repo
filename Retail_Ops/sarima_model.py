@@ -5,7 +5,7 @@ from pmdarima import auto_arima
 import matplotlib.pyplot as plt
 
 # Set the page configuration
-st.set_page_config(page_title="Store Sales Forecasting with Auto SARIMA", layout="wide")
+st.set_page_config(page_title="Store Sales Forecasting with SARIMA", layout="wide")
 
 # Load the data
 retail_data = pd.read_csv("Retail_Ops/data_sources/retail_store_data.csv")
@@ -95,3 +95,24 @@ ax.set_title(f"Weekly Sales Forecasting for Store {store_id} using Auto SARIMA")
 ax.set_xlabel("Date")
 ax.set_ylabel("Sales")
 st.pyplot(fig)
+
+# Explanation of the model for users
+st.markdown("""
+## What is this model?
+This model uses a statistical technique called SARIMA (Seasonal Auto-Regressive Integrated Moving Average) to forecast store sales on a weekly basis. It's a way of predicting future sales by analyzing past data patterns.
+
+## How does it work?
+1. **Data Collection**: The model gathers historical sales data from the selected store.
+2. **Data Preprocessing**: It processes the data by organizing the sales into weekly totals, helping to capture seasonality (e.g., patterns that repeat every year).
+3. **Model Selection**: The model automatically selects the best-fitting parameters for SARIMA using a tool called `auto_arima`. These parameters determine how the model handles trends, seasonal fluctuations, and short-term changes in sales patterns.
+4. **Model Summary**: The results include a detailed summary showing how well the model fits the sales data, as well as important statistical information like coefficients that help explain the sales behavior.
+
+## What does this accomplish?
+- **Predicts future sales**: By understanding patterns in store sales, the model can provide forecasts, helping managers plan for inventory, staffing, and promotions.
+- **Provides insight into the data**: The model summary gives information about the key factors influencing sales, making it clear whether there are trends, seasonality, or randomness in the store's performance.
+
+## How to interpret this summary:
+1. **Model Fit**: Look for the coefficients and statistical tests, which tell you how well the model explains the data.
+2. **Seasonality and Trends**: See how the model captures yearly sales cycles and whether it adjusts for any irregular trends in the data.
+""")
+
