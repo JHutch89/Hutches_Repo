@@ -8,9 +8,9 @@ calendar = [
     ["6/29/24", "Twisted Dune", "9:30am", "$110"],
     ["7/20/24", "Town and Country", "9:30am", "$95"],
     ["8/25/24", "Cream Ridge", "9:36am", "$70"],
-    ["9/14/24", "Buena Vista", "9:34", "$70"],
+    ["9/14/24", "Buena Vista", "9:34am", "$70"],
     ["10/12/24", "Mercer Oaks", "TBD", "TBD"],
-    ["11/2/24", "Scotland Run *", "TBD", "TBD"]
+    ["11/2/24", "Scotland Run", "10:00am", "TBD"]
 ]
 
 sjmga_2024 = pd.DataFrame(calendar, columns=["Date", "Course", "Time", "Price"])
@@ -20,18 +20,18 @@ sjmga_2024.set_index("Date", inplace=True)
 
 
 member_snpsht = [
-    ["Jason Hutches", "$95", "23.9"],
-    ["Dave Cunningham", "$60","23"],
-    ["Alex Taraschi", "$50","20"],
+    ["Jason Hutches", "$105", "23.2"],
+    ["Dave Cunningham", "$85","22.8"],
+    ["Alex Taraschi", "$50","20.7"],
     ["Ken Cooper", "$45","31.4"],
-    ["Chick Campbell", "$40","35.1"],
+    ["Chick Campbell", "$50","36.3"],
     ["Tom Taraschi", "$50","28.6"],
-    ["Rich Hamner", "$30","26.4"],
+    ["Rich Hamner", "$55","26"],
     ["Shawn Frick", "$30","28.3"],
-    ["Mark McDermott", "$30","27.5"],
+    ["Mark McDermott", "$50","27.2"],
     ["Kyle McClintock", "$10","26.9"],
     ["Keith Kalbach", "$45","35.3"],
-    ["Don Latka", "$40","28.3"]
+    ["Don Latka", "$60","28"]
 ]
 
 snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Winnings", "HC"])
