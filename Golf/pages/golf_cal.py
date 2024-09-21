@@ -9,7 +9,7 @@ calendar = [
     ["7/20/24", "Town and Country", "9:30am", "$95"],
     ["8/25/24", "Cream Ridge", "9:36am", "$70"],
     ["9/14/24", "Buena Vista", "9:34am", "$70"],
-    ["10/12/24", "Mercer Oaks", "TBD", "TBD"],
+    ["10/12/24", "Golden Pheasant", "12:00pm", "$86"],
     ["11/2/24", "Scotland Run", "10:00am", "TBD"]
 ]
 
