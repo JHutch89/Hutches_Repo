@@ -20,21 +20,21 @@ sjmga_2024.set_index("Date", inplace=True)
 
 
 member_snpsht = [
-    ["Jason Hutches", "$105", "23.2"],
-    ["Dave Cunningham", "$85","22.8"],
-    ["Alex Taraschi", "$50","20.7"],
-    ["Ken Cooper", "$45","31.4"],
-    ["Chick Campbell", "$50","36.3"],
-    ["Tom Taraschi", "$50","28.6"],
-    ["Rich Hamner", "$55","26"],
-    ["Shawn Frick", "$30","28.3"],
-    ["Mark McDermott", "$50","27.2"],
-    ["Kyle McClintock", "$10","26.9"],
-    ["Keith Kalbach", "$45","35.3"],
-    ["Don Latka", "$60","28"]
+    ["Jason Hutches", "$120", "22", "17.6"],
+    ["Dave Cunningham", "$95","23", "18.4"],
+    ["Alex Taraschi", "$55","21.9", "17.5"],
+    ["Ken Cooper", "$65","31.6", "25.3"],
+    ["Chick Campbell", "$50","36.3", "29"],
+    ["Tom Taraschi", "$80","28.8", "23"],
+    ["Rich Hamner", "$70","26.8", "21.4"],
+    ["Shawn Frick", "$30","28.3", "22.7"],
+    ["Mark McDermott", "$50","27.2", "21.8"],
+    ["Kyle McClintock", "$10","26.9", "21.6"],
+    ["Keith Kalbach", "$45","35.3", "28.2"],
+    ["Don Latka", "$75","28.1", "22.5"]
 ]
 
-snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Winnings", "HC"])
+snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Winnings", "HC", "Championship HC"])
 snpst = snpst.sort_values(by='Golfer')
 snpst.set_index("Golfer", inplace=True)
 
