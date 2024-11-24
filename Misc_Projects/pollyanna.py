@@ -24,10 +24,10 @@ def spin_wheel(df, selected_name):
         unsafe_allow_html=True
     )
 
-    st.markdown('<h1 class="header">2023 Christmas Pollyanna</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="header">2024 Christmas Pollyanna</h1>', unsafe_allow_html=True)
 
     # Display the centered image at the top
-    st.image("images/christmas_image.png", use_column_width=True)
+    st.image("Misc_Projects/Images/santa.jpeg", use_column_width=True)
     st.write("")
     st.write("Choose your name from the dropdown:")
     
@@ -36,7 +36,7 @@ def spin_wheel(df, selected_name):
         selected_name = st.selectbox("Select your name", df['buyer_name'])
         
     st.write("")
-    st.write("Click 'Spin' to generate your 2023 Pollyanna assignment!")
+    st.write("Click 'Spin' to generate your 2024 Pollyanna assignment!")
 
     # Check if the user has selected a name
     if selected_name:
