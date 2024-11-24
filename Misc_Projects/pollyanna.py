@@ -27,7 +27,7 @@ def spin_wheel(df, selected_name):
     st.markdown('<h1 class="header">2024 Christmas Pollyanna</h1>', unsafe_allow_html=True)
 
     # Display the centered image at the top
-    st.image("Misc_Projects/Images/santa.jpeg", width=500)
+    st.image("Misc_Projects/Images/santa.jpeg", width=350)
     st.write("")
     st.write("Choose your name from the dropdown:")
     
