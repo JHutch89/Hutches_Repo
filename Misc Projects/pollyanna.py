@@ -4,8 +4,8 @@ import time
 
 # Sample data
 data = {
-    'buyer_name': ['Jason', 'Steve', 'Katie', 'Brittan', 'Courtney', 'Bryan', 'Alec', 'Lori'],
-    'buys_for_name': ['Brittan', 'Lori', 'Courtney', 'Bryan', 'Alec', 'Steve', 'Jason', 'Katie']
+    'buyer_name': ['Jason', 'Steve', 'Katie', 'Brittan', 'Courtney', 'Bryan', 'Alec',],
+    'buys_for_name': ['Steve', 'Courtney', 'Bryan', 'Jason', 'Katie', 'Alec', 'Brittan']
 }
 
 # Create a DataFrame
