@@ -21,7 +21,7 @@ sjmga_2025.set_index("Date", inplace=True)
 
 # Set up golfer data
 member_snpsht = [
-    ["Jason Hutches", "$120", "23"],
+    ["Jason Hutches", "$150", "23"],
     ["Dave Cunningham", "$150", "23"],
     ["Alex Taraschi", "$150", "21.9"],
     ["Ken Cooper", "$150", "31.6"],
