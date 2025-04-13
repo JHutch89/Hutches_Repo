@@ -4,8 +4,8 @@ from datetime import datetime
 
 # Set up tournament calendar
 calendar = [
-    ["4/12/25", "Pinelands", "9:33", "$95"],
     ["5/17/25", "Rancocas", "TBD", "$TBD"],
+    ["5/31/25", "Pinelands", "TBD", "$95"],
     ["6/14/25", "Mercer Oaks", "TBD", "$TBD"],
     ["7/19/25", "Town and Country", "TBD", "$TBD"],
     ["8/23/25", "Cream Ridge", "TBD", "$TBD"],
