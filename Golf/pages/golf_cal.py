@@ -5,7 +5,7 @@ from datetime import datetime
 # Set up tournament calendar
 calendar = [
     ["5/17/25", "Rancocas", "8:20am", "$92"],
-    ["5/31/25", "Pinelands", "TBD", "$95"],
+    ["5/31/25", "Pinelands", "8:48", "$95"],
     ["6/14/25", "Mercer Oaks", "TBD", "$TBD"],
     ["7/19/25", "Town and Country", "TBD", "$TBD"],
     ["8/23/25", "Cream Ridge", "TBD", "$TBD"],
@@ -21,16 +21,16 @@ sjmga_2025.set_index("Date", inplace=True)
 
 # Set up golfer data
 member_snpsht = [
-    ["Jason Hutches", "$150", "23"],
-    ["Dave Cunningham", "$150", "23"],
-    ["Alex Taraschi", "$150", "21.9"],
-    ["Ken Cooper", "$150", "31.6"],
-    ["Chick Campbell", "$100", "36.3"],
-    ["Tom Taraschi", "$150", "28.8"],
+    ["Jason Hutches", "Paid", "21.7"],
+    ["Dave Cunningham", "Paid", "22.7"],
+    ["Alex Taraschi", "Paid", "21.6"],
+    ["Ken Cooper", "Paid", "31.6"],
+    ["Chick Campbell", "Paid", "36.5"],
+    ["Tom Taraschi", "Paid", "28.8"],
     ["Rich Hamner", "$80", "26.8"],
-    ["Shawn Frick", "$120", "28.3"],
-    ["Mark McDermott", "$150", "27.2"],
-    ["Don Latka", "$150", "28.1"]
+    ["Shawn Frick", "$120", "28.8"],
+    ["Mark McDermott", "Paid", "26.2"],
+    ["Don Latka", "$150", "27.6"]
 ]
 
 snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Dues Owed", "HC"])
@@ -55,7 +55,6 @@ st.dataframe(snpst, 1000, 450)
 # # Input for scores and calculation of net scores
 # st.subheader("Enter Your Score")
 # net_scores = {}
-
 # for golfer in snpst.index:
 #     score = st.number_input(f"Enter score for {golfer}:", min_value=0, max_value=200, step=1)
 #     championship_hc = snpst.at[golfer, "Championship HC"]
