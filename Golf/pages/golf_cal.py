@@ -33,7 +33,7 @@ member_snpsht = [
     ["Don Latka", "Paid", "$5", "27.5"]
 ]
 
-snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Dues Owed", "Winnings" "HC"])
+snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Dues Owed", "Winnings", "HC"])
 snpst = snpst.sort_values(by='Golfer')
 snpst.set_index("Golfer", inplace=True)
 
