@@ -5,10 +5,10 @@ from datetime import datetime
 # Set up tournament calendar
 calendar = [
     ["5/17/25", "Rancocas", "8:20am", "$92"],
-    ["5/31/25", "Pinelands", "8:48am", "$95"],
     ["6/14/25", "Hanover", "8:26am", "$70"],
     ["7/19/25", "Town and Country", "TBD", "$TBD"],
     ["8/23/25", "Cream Ridge", "TBD", "$TBD"],
+    ["Resched TBD", "Pinelands", "TBD", "$95"],
     ["9/20/25", "Buena Vista", "TBD", "$TBD"],
     ["10/11/25", "Golden Pheasant", "TBD", "$TBD"],
     ["11/1/25", "TBD", "TBD", "$TBD"]
@@ -21,19 +21,19 @@ sjmga_2025.set_index("Date", inplace=True)
 
 # Set up golfer data
 member_snpsht = [
-    ["Jason Hutches", "Paid", "21.7"],
-    ["Dave Cunningham", "Paid", "22.7"],
-    ["Alex Taraschi", "Paid", "21.6"],
-    ["Ken Cooper", "Paid", "31.6"],
-    ["Chick Campbell", "Paid", "36.5"],
-    ["Tom Taraschi", "Paid", "28.8"],
-    ["Rich Hamner", "Paid", "26.8"],
-    ["Shawn Frick", "$120", "28.8"],
-    ["Mark McDermott", "Paid", "26.2"],
-    ["Don Latka", "Paid", "27.6"]
+    ["Jason Hutches", "Paid", "$15", "21.7"],
+    ["Dave Cunningham", "Paid", "$10", "21.8"],
+    ["Alex Taraschi", "Paid", "$45", "20.8"],
+    ["Ken Cooper", "Paid", "$10", "30.7"],
+    ["Chick Campbell", "Paid", "$15", "36.2"],
+    ["Tom Taraschi", "Paid", "$0", "28.8"],
+    ["Rich Hamner", "Paid", "$35", "25.8"],
+    ["Shawn Frick", "$120", "$0", "28.8"],
+    ["Mark McDermott", "Paid", "$55", "25.3"],
+    ["Don Latka", "Paid", "$5", "27.5"]
 ]
 
-snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Dues Owed", "HC"])
+snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Dues Owed", "Winnings" "HC"])
 snpst = snpst.sort_values(by='Golfer')
 snpst.set_index("Golfer", inplace=True)
 
