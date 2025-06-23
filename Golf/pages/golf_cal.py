@@ -5,8 +5,8 @@ from datetime import datetime
 # Set up tournament calendar
 calendar = [
     ["5/17/25", "Rancocas", "8:20am", "$92"],
-    ["5/31/25", "Pinelands", "8:48", "$95"],
-    ["6/14/25", "Mercer Oaks", "TBD", "$TBD"],
+    ["5/31/25", "Pinelands", "8:48am", "$95"],
+    ["6/14/25", "Hanover", "8:26am", "$70"],
     ["7/19/25", "Town and Country", "TBD", "$TBD"],
     ["8/23/25", "Cream Ridge", "TBD", "$TBD"],
     ["9/20/25", "Buena Vista", "TBD", "$TBD"],
@@ -27,10 +27,10 @@ member_snpsht = [
     ["Ken Cooper", "Paid", "31.6"],
     ["Chick Campbell", "Paid", "36.5"],
     ["Tom Taraschi", "Paid", "28.8"],
-    ["Rich Hamner", "$80", "26.8"],
+    ["Rich Hamner", "Paid", "26.8"],
     ["Shawn Frick", "$120", "28.8"],
     ["Mark McDermott", "Paid", "26.2"],
-    ["Don Latka", "$150", "27.6"]
+    ["Don Latka", "Paid", "27.6"]
 ]
 
 snpst = pd.DataFrame(member_snpsht, columns=["Golfer", "Dues Owed", "HC"])
